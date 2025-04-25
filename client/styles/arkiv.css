@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    display: flex;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background: #2c3e50;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    padding: 15px 20px;
+  }
+  
+  .sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar nav ul li:hover {
+    background: #34495e;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 40px;
+  }
+
+  .search-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .search-section h2 {
+    margin-top: 0;
+  }
+  
+  .search-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .search-section input, .search-section select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-section button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-section button:hover {
+    background-color: #c0392b;
+  }
+
+  .receipt {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+    width: 300px;
+    font-family: monospace;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .receipt h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+  
+  .receipt .items div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .receipt .total {
+    border-top: 1px dashed #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  #nav-buttons {
+    display: none; /* Skjul hele containeren til at starte med */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #nav-buttons button {
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #nav-buttons button:hover {
+    background: #2980b9;
+  }
+  
+  #nav-buttons button:disabled {
+    background: #bdc3c7;
+    cursor: default;
+  }
+
+  .search-and-result {
+    display: flex;
+    gap: 40px; /* afstand mellem søgeboks og kvittering */
+  }
+
+  .search-result {
+    flex: 1;
+  }

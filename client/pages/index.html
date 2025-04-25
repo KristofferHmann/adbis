@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q8 Dashboard</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<body>
+   
+  <div class="container">
+    <aside class="sidebar">
+        <nav>
+            <ul>
+              <li><a href="/pages/index.html">Dashboard</a></li>
+              <li><a href="/pages/arkiv.html">Arkiv</a></li>
+              <li><a href="/pages/reklamation.html">Reklamation</a></li>
+            </ul>
+          </nav>
+    </aside>
+
+    <div class="user-box">
+        <span id="username-display">Hej, bruger</span>
+        <button id="logout-btn">Log ud</button>
+      </div>
+
+    <main class="main-content">
+      <h1>OVERSIGT OVER SYSTEM</h1>
+      <p class="date-stamp" id="date-stamp"></p>
+
+      <div class="overview-grid">
+        <div class="overview-box" id="leveringer">Leveringer i år</div>
+        <div class="overview-box" id="reklamationer">Reklamationer i år</div>
+        <div class="overview-box">Systemoverblik</div>
+        <div class="overview-box">Systemoverblik</div>
+        <div class="overview-box">Systemoverblik</div>
+        <div class="overview-box">Systemoverblik</div>
+        <div class="overview-box wide">Systemoverblik</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/scripts/index.js"></script>
+</body>
+</html>
