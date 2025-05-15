@@ -26,7 +26,10 @@ Systemet består af et digitalt arkiv, hvor brugeren kan:
 npm install
 2. Start serveren:
 node server.js
-3. Gå til:
+3. Login
+Som brugernavn brug admin
+Som kodeord brug 1234
+4. Gå til:
 http://localhost:3000/pages/arkiv.html
 
 
