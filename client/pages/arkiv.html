@@ -8,14 +8,22 @@
 
 </head>
 <body>
+  <div class="user-box">
+        <span id="username-display">Hej, bruger</span>
+        <button id="logout-btn">Log ud</button>
+      </div>
+
     <div class="container">
       <!-- Sidebar -->
       <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="/q8.png" alt="Logo" style="width: 100px; margin: 20px auto; display: block;">
+        </div>
         <nav>
           <ul>
-            <li><a href="/pages/index.html">Dashboard</a></li>
+            <li><a>Hjemmeskærm</a></li>
             <li><a href="/pages/arkiv.html">Arkiv</a></li>
-            <li><a href="/pages/reklamation.html">Reklamation</a></li>
+            <li><a>Reklamation</a></li>
           </ul>
         </nav>
       </aside>
@@ -25,45 +33,60 @@
         <div class="search-and-result">
           <!-- Søgekriterier -->
           <div class="search-section">
-            <h2>Søgning</h2>
+  <h2>Søgning</h2>
+
+  <!-- Type-feltet for sig selv -->
+  <div class="type-wrapper">
+    <label for="doc-type"><strong>Type af dokument:</strong></label>
+    <select id="doc-type">
+      <option value="kvittering">Kvittering</option>
+      <option value="rapport">Rapport</option>
+    </select>
+    <span id="doc-info">Du søger i købskvitteringer</span>
+  </div>
   
-          <form id="search-form">
-            <label for="doc-type">Type af dokument:</label>
-            <select id="doc-type">
-              <option value="kvittering">Kvittering</option>
-              <option value="rapport">Rapport</option>
-            </select>
-  
-            <label for="year">Årstal:</label>
-            <input type="number" id="year" placeholder="f.eks. 2024">
-  
-            <label for="date-interval-start">Dato interval (fra):</label>
-            <input type="date" id="date-interval-start">
-  
-            <label for="date-interval-end">Dato interval (til):</label>
-            <input type="date" id="date-interval-end">
-            <br>
-            <label for="time-start">Tidsrum (fra):</label>
-            <input type="time" id="time-start">
-  
-            <label for="time-end">Tidsrum (til):</label>
-            <input type="time" id="time-end">
-  
-            <label for="keyword">Nøgleord/tal:</label>
-            <input type="text" id="keyword" placeholder="Indtast nøgleord eller tal">
-  
-            <button type="submit">Søg</button>
-            <button type="button" id="reset-btn">Nulstil</button>
-            <p id="results-count" style="margin-top: 10px; font-weight: bold;"></p>
-          </form>
-        </div>
+<form id="search-form">
+  <div class="form-group">
+    <label for="year">Årstal:</label>
+    <input type="number" id="year" placeholder="f.eks. 2024">
+  </div>
+
+  <div class="form-group">
+    <label for="date-interval-start">Dato interval (fra):</label>
+    <input type="date" id="date-interval-start">
+  </div>
+
+  <div class="form-group">
+    <label for="date-interval-end">Dato interval (til):</label>
+    <input type="date" id="date-interval-end">
+  </div>
+
+  <div class="form-group">
+    <label for="time-start">Tidsrum (fra):</label>
+    <input type="time" id="time-start">
+  </div>
+
+  <div class="form-group">
+    <label for="time-end">Tidsrum (til):</label>
+    <input type="time" id="time-end">
+  </div>
+
+  <div class="form-group">
+    <label for="keyword">Nøgleord/tal:</label>
+    <input type="text" id="keyword" placeholder="Indtast nøgleord eller tal">
+  </div>
+
+  <button type="submit">Søg</button>
+  <button type="button" id="reset-btn">Nulstil</button>
+  <p id="results-count" style="margin-top: 10px; font-weight: bold;"></p>
+</form>
   
         <!-- Resultat visning -->
         <div id="search-result" class="search-result">
           <!-- Resultatet (kvittering eller rapport) vises her -->
           <div id="receipt-container"></div>
         <!-- Navigation -->
-<div id="nav-buttons">
+<div id="nav-buttons" style="display: none;">
     <button id="prev-btn">Forrige</button>
     <button id="next-btn">Næste</button>
             </div>

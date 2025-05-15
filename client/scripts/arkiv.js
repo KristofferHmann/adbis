@@ -324,3 +324,32 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   document.getElementById('search-result').innerHTML = '';
   document.getElementById('results-count').innerText = '';
 });
+
+document.getElementById('doc-type').addEventListener('change', (e) => {
+  const val = e.target.value;
+  const info = document.getElementById('doc-info');
+
+  if (val === 'kvittering') {
+    info.textContent = 'Du søger i købskvitteringer ';
+  } else if (val === 'rapport') {
+    info.textContent = 'Du søger i rapporter ';
+  } else {
+    info.textContent = '';
+  }
+});
+
+async function fetchUser() {
+    const res = await fetch('/me');
+    const data = await res.json();
+    if (data.username) {
+      document.getElementById('username-display').innerText = `Hej, ${data.username}`;
+    }
+  }
+  
+  // Log ud
+  document.getElementById('logout-btn').addEventListener('click', async () => {
+    await fetch('/logout', { method: 'POST' });
+    window.location.href = '/pages/login.html';
+  });
+  
+  fetchUser();

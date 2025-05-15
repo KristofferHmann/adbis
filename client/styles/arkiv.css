@@ -58,6 +58,7 @@ body {
 .main-content {
   flex: 1;
   padding: 30px 40px;
+  padding-top: 60px;
 }
 
 h1,
@@ -212,4 +213,48 @@ h2 {
 
 .documentBtn:hover {
   background: #0b3e91;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: #eee;
+  }
+  
+  .user-box {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #logout-btn {
+    padding: 5px 10px;
+    background-color: #d33;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .type-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+#doc-info {
+  font-weight: bold;
+  color: #002776;
+  font-size: 1rem;
+}
+
+.form-group {
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 10px;
 }

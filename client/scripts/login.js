@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (data.success) {
         // Hvis login lykkes, send brugeren til dashboard
-        window.location.href = '/pages/index.html';
+        window.location.href = '/pages/arkiv.html';
       } else {
         // Hvis login fejler, vis fejl
         document.getElementById('error-msg').innerText = 'Forkert brugernavn eller adgangskode';
       }
     });
   });
+
+  
 
   
